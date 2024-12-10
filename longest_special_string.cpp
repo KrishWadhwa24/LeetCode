@@ -8,44 +8,46 @@ Return the length of the longest special substring of s which occurs at least th
 A substring is a contiguous non-empty sequence of characters within a string.
 */
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-class Solution {
+class Solution
+{
 public:
-    int maximumLength(string s) {
+    int maximumLength(string s)
+    {
         int start = 0;
-        unordered_map<string,int> mpp;
-        for(int i =0;i<s.length();i++)
+        unordered_map<string, int> mpp;
+        for (int i = 0; i < s.length(); i++)
         {
-            if(i==s.length()-1||s[i]!=s[i+1])
+            if (i == s.length() - 1 || s[i] != s[i + 1])
             {
-                int len = i-start+1;
-                string str = s.substr(start,len);
-                start = i+1;
+                int len = i - start + 1;
+                string str = s.substr(start, len);
+                start = i + 1;
                 mpp[str]++;
-                if(len>=2)
+                if (len >= 2)
                 {
-                    mpp[str.substr(0,len-1)]+=2;
+                    mpp[str.substr(0, len - 1)] += 2;
                 }
-                if(len>=3)
+                if (len >= 3)
                 {
-                    mpp[str.substr(0,len-2)]+=3;
+                    mpp[str.substr(0, len - 2)] += 3;
                 }
             }
         }
         int res = -1;
-        for(auto it:mpp)
+        for (auto it : mpp)
         {
-            if(it.second>=3)
-            res= max(res,(int)it.first.length());
+            if (it.second >= 3)
+                res = max(res, (int)it.first.length());
         }
         return res;
     }
 };
-//Time Complexity: O(N)
-//Space Complexity: O(N^2)
+// Time Complexity: O(N)
+// Space Complexity: O(N^2)
 
-//Brute Force
+// Brute Force
 
 // class TrieNode {
 // public:
@@ -109,17 +111,17 @@ public:
 //     }
 // };
 
-//Time Complexity: O(N^2)
-//Space Complexity: O(N^2)
+// Time Complexity: O(N^2)
+// Space Complexity: O(N^2)
 
 int main()
 {
     Solution s;
-    cout<<s.maximumLength("ababccc")<<endl;
-    cout<<s.maximumLength("ababcccd")<<endl;
-    cout<<s.maximumLength("ababcccc")<<endl;
-    cout<<s.maximumLength("ababccccc")<<endl;
-    cout<<s.maximumLength("ababbbbbbbbbbcccccc")<<endl;
-    cout<<s.maximumLength("ababccccccc")<<endl;
+    cout << s.maximumLength("ababccc") << endl;
+    cout << s.maximumLength("ababcccd") << endl;
+    cout << s.maximumLength("aabbbcc") << endl;
+    cout << s.maximumLength("ababccccc") << endl;
+    cout << s.maximumLength("ababbbbbbbbbbcccccc") << endl;
+    cout << s.maximumLength("ababccccccc") << endl;
     return 0;
 }
