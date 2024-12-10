@@ -119,7 +119,7 @@ int main()
     Solution s;
     cout << s.maximumLength("ababccc") << endl;
     cout << s.maximumLength("ababcccd") << endl;
-    cout << s.maximumLength("aabbbcc") << endl;
+    cout << s.maximumLength("aabbbccbbbbbbbbbbsddd") << endl;
     cout << s.maximumLength("ababccccc") << endl;
     cout << s.maximumLength("ababbbbbbbbbbcccccc") << endl;
     cout << s.maximumLength("ababccccccc") << endl;
