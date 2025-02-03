@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
+#define pb push_back
+#define pp pop_back
+#define vec vector
 
 vector<int> sieve(int n) {
     vector<int> primes, is_prime(n + 1, true);
