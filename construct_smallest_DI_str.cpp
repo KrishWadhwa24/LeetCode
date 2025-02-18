@@ -2,6 +2,7 @@
 using namespace std;
 
 /*
+
 You are given a 0-indexed string pattern of length n consisting of the characters 'I' meaning increasing and 'D' meaning decreasing.
 
 A 0-indexed string num of length n + 1 is created using the following conditions:
@@ -36,6 +37,7 @@ Constraints:
 
 1 <= pattern.length <= 8
 pattern consists of only the letters 'I' and 'D'.
+
 */
 
 class Solution
