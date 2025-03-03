@@ -15,6 +15,18 @@ typedef vector<pair<int,int>> vpi;
 #define mp make_pair
 #define pb push_back
 #define pp pop_back
+#define endl "\n"
+#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define sort(x) sort(all(x))
+#define reverse(x) reverse(all(x))
+#define print_macro(x) cout << x << endl;
+#define printarr(a,n) for(int i = 0; i < n; i++) cout << a[i] << " "; cout << endl;
+#define printvec(v) for(auto x : v) cout << x << " "; cout << endl;
+#define printpair(v) for(auto x : v) cout << x.F << " " << x.S << endl;
+#define printmap(m) for(auto x : m) cout << x.F << " " << x.S << endl;
+#define printset(s) for(auto x : s) cout << x << " "; cout << endl;
+#define SQ(a) (a)*(a)
+#define rep(i,a,b) for(int i = a; i < b; i++)
 #define vec vector
 #define str string
 
@@ -36,7 +48,7 @@ template <typename T> void matrix(const vector<vector<T>> &v) { for (auto &r : v
 void run() {}
 
 int main() {
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    fast;
     run();
     return 0;
 }
