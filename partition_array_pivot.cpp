@@ -109,7 +109,7 @@ public:
 };
 
 
-Time Complexity: O(N) + O(N) = O(N), where N is the length of the array nums.
+Time Complexity: O(N) + O(N) = O(N)
 Space Complexity: O(N)
 
 */
