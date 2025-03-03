@@ -1,9 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int,int> pi;
+typedef vector<pair<int,int>> vpi;
+
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define sz(x) (int)(x).size()
+#define lb lower_bound
+#define ub upper_bound
+#define F first
+#define S second
+#define mp make_pair
 #define pb push_back
 #define pp pop_back
 #define vec vector
+#define str string
+
 
 vector<int> sieve(int n) {
     vector<int> primes, is_prime(n + 1, true);
