@@ -30,6 +30,14 @@ typedef vector<pair<int,int>> vpi;
 #define vec vector
 #define str string
 
+const int MOD = 1e9+7;
+const int INF = 1e9;
+const ll LLINF = 1e18;
+
+int digitCount(int x) { if (x == 0) return 1; return floor(log10(x) + 1);}
+template <typename T> void print(const vector<T> &v) { for (auto &e : v) cout << e << " "; cout << endl; }
+template <typename T> void matrix(const vector<vector<T>> &v) { for (auto &r : v) print(r); }
+long long fibonacci(int n) { double sqrt5 = sqrt(5);double phi = (1 + sqrt5) / 2;return round(pow(phi, n) / sqrt5);}
 
 vector<int> sieve(int n) {
     vector<int> primes, is_prime(n + 1, true);
@@ -42,8 +50,7 @@ vector<int> sieve(int n) {
     return primes;
 }
 
-template <typename T> void print(const vector<T> &v) { for (auto &e : v) cout << e << " "; cout << endl; }
-template <typename T> void matrix(const vector<vector<T>> &v) { for (auto &r : v) print(r); }
+
 
 void run() {}
 
