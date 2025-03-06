@@ -30,34 +30,48 @@ Constraints:
 1 <= n <= 10^5
 */
 
-typedef long long int ll;
 class Solution
 {
 public:
     long long coloredCells(int n)
     {
-        int start = 2 * n;
-        ll sum = 0;
+        return 1 + (long long)n * (n - 1) * 2;
+    }
+};
 
-        for (int i = 1; i < 2 * n; i += 2)
+/*
+Time Complexity: O(1)
+Space Complexity: O(1)
+*/
+
+/*
+
+typedef long long int ll;
+class Solution {
+public:
+    long long coloredCells(int n) {
+        int start  = 2*n;
+        ll sum  = 0;
+
+        for(int i =1;i<2*n;i+=2)
         {
-            if (i == 1)
+            if(i==1)
             {
-                sum += (2 * n - i);
-            }
-            else if (2 * n - i > 0)
+                sum+=(2*n-i);
+            }else
+            if(2*n-i>0)
             {
-                sum += (2 * (2 * n - i));
+                sum+=(2*(2*n-i));
             }
         }
         return sum;
     }
 };
-/*
+*/
 
+/*
 Time Complexity: O(n)
 Space Complexity: O(1)
-
 */
 
 int main()
