@@ -24,38 +24,39 @@ Constraints:
 1 <= nums[i] <= 100
 */
 
-
-//Space Optimized
+// Space Optimized
 
 typedef long long int ll;
-class Solution {
+class Solution
+{
 public:
-    bool canPartition(vector<int>& nums) {
+    bool canPartition(vector<int> &nums)
+    {
         int n = nums.size();
         ll sum = 0;
-        for (auto& it : nums)
+        for (auto &it : nums)
             sum += it;
 
         if (sum % 2 != 0)
             return false;
 
         ll k = sum / 2;
-        vector<bool> prev(k+1,false);
+        vector<bool> prev(k + 1, false);
         prev[0] = true;
 
-        for(int i =1;i<n;i++)
+        for (int i = 1; i < n; i++)
         {
-            vector<bool> curr(k+1,false);
+            vector<bool> curr(k + 1, false);
             curr[0] = true;
-            for(int target = 1;target<=k;target++)
+            for (int target = 1; target <= k; target++)
             {
                 bool notTake = prev[target];
                 bool take = false;
 
-                if(nums[i]<=target)
-                take = prev[target-nums[i]];
+                if (nums[i] <= target)
+                    take = prev[target - nums[i]];
 
-                curr[target] = take|notTake;
+                curr[target] = take | notTake;
             }
             prev = curr;
         }
@@ -67,7 +68,6 @@ public:
 Time Complexity: O(n*target)
 Space Complexity: O(target)+ O(target) = O(target)
 */
-
 
 /*
 Tabulation
@@ -112,7 +112,6 @@ Time Complexity: O(n*target)
 Space Complexity: O(n*target) + O(n) = O(n*target)
 
 */
-
 
 /*
 Memoization
@@ -163,7 +162,6 @@ Space Complexity: O(n*target) + O(n) + O(n) = O(n*target)
 
 */
 
-
 /*
 
 //Backtracking
@@ -209,8 +207,8 @@ Space Complexity: O(n)
 
 int main()
 {
-    vector<int> nums = {1,5,11,5};
+    vector<int> nums = {1, 5, 11, 5};
     Solution s;
-    cout<<s.canPartition(nums);
+    cout << s.canPartition(nums);
     return 0;
 }
