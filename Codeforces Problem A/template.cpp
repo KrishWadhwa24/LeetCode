@@ -17,8 +17,9 @@ typedef vector<pair<int,int>> vpi;
 #define pp pop_back
 #define endl "\n"
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define sort(x) sort(all(x))
+#define Sort(x) sort(all(x))
 #define reverse(x) reverse(all(x))
+#define input(v, n) for(int i = 0; i < n; i++) cin >> v[i];
 #define print_macro(x) cout << x << endl;
 #define printarr(a,n) for(int i = 0; i < n; i++) cout << a[i] << " "; cout << endl;
 #define printvec(v) for(auto x : v) cout << x << " "; cout << endl;
