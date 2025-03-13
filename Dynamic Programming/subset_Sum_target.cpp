@@ -30,7 +30,7 @@ public:
     bool isSubsetSum(vector<int> &arr, int target)
     {
         int n = arr.size();
-        vector<bool> prev(target + 1, false), curr(target + 1, false);
+        vector<bool> prev(target + 1, false);
 
         // Base case: sum 0 is always possible
         prev[0] = true;
@@ -39,6 +39,7 @@ public:
 
         for (int ind = 1; ind < n; ind++)
         {
+            vector<bool> curr(target + 1, false);
             curr[0] = true;
             for (int j = 1; j <= target; j++)
             {
