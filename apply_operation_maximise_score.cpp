@@ -2,6 +2,7 @@
 using namespace std;
 
 /*
+
 You are given an array nums of n positive integers and an integer k.
 
 Initially, you start with a score of 1. You have to maximize your score by applying the following operation at most k times:
